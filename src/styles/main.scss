@@ -1,0 +1,354 @@
+@use '../styles/parstials/variables' as*;
+
+.section-one {
+    padding: 100px 5px;
+}
+
+.section-one .col-4 {
+    flex-basis: calc((100% / 12) * 12);
+}
+
+.section-one .col-8 {
+    flex-basis: calc((100% / 12) * 12);
+}
+
+.section-one .col-6 {
+    flex-basis: calc((100% / 12) * 12);
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.20);
+    padding: 40px 30px 50px;
+
+    &:hover {
+        background: linear-gradient(90deg, $bg-orange 0%, $bg-lgt-orange 100%);
+        color: $bg-white;
+    }
+}
+
+.card-icon {
+    font-size: 50px;
+}
+
+.card-title {
+    font-size: 30px;
+    font-weight: 400;
+    padding: 15px 0;
+}
+
+.section-one [class^='col-'] {
+    padding: 15px;
+}
+
+// inizio sezione 2
+
+.section-two {
+    background-color: $bg-light;
+    padding: 200px 0;
+
+
+    .col-6 {
+        flex-basis: calc((100% / 12) * 12);
+    }
+
+    .imgs-about {
+
+        background-image: linear-gradient(90deg, $bg-orange 0%, $bg-lgt-orange 100%),
+            url('/busy-architect-PYVKWM4-1024x872.jpg');
+        // height: 500px;
+        background-size: cover;
+        border-radius: 0 30px 30px 0;
+
+        .about-img {
+            border-radius: 0 20px 20px 0;
+            margin: 50px 0 0;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.20);
+        }
+    }
+
+    .about-text {
+        padding: 50px 20px 0 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        align-items: flex-start;
+    }
+}
+
+// inizio sezione 3
+.section-three {
+    margin: 180px 0;
+    overflow: hidden;
+
+    .col-6 {
+        flex-basis: calc((100% / 12) * 12);
+    }
+
+    .projects-text {
+        align-self: flex-end;
+    }
+
+    .project-img-card-body {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 100px 0;
+        position: relative;
+
+        .col-3 {
+            flex-basis: calc((100% / 12) * 6);
+        }
+
+        .project-img-card {
+            position: relative;
+
+            &:hover .project-info {
+                display: flex;
+            }
+
+            &:hover.col-3 {
+                transition: 500ms;
+                transform: scale(1.1);
+                z-index: 99;
+            }
+        }
+
+        .project-img {
+            border-radius: 3px;
+        }
+
+        .project-info {
+            position: absolute;
+            left: 3px;
+            right: 3px;
+            top: 3px;
+            bottom: 3px;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 40px;
+            border-radius: 3px;
+            color: $bg-white;
+            z-index: 99;
+            background: $bg-gradient;
+            opacity: 0.9;
+            display: none;
+        }
+    }
+}
+
+
+.divider::before {
+    content: '';
+    display: block;
+    height: 4px;
+    width: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('/public/divider.png');
+    margin: 15px 0;
+}
+
+.section-three [class^='col-3'] {
+    padding: 3px;
+}
+
+.section-three [class^='col-6'] {
+    padding: 0 10px;
+}
+
+// inizio sezione 4
+
+.section-four [class^='col-'] {
+    padding: 10px;
+}
+
+.section-four {
+    text-align: center;
+    background-color: $bg-light;
+
+    .col-4 {
+        flex-basis: calc((100% / 12) * 12);
+    }
+
+    .blog-card-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+
+        .sect-four-title {
+            font-size: 45px;
+            font-weight: 500;
+            display: block;
+            line-height: 65px;
+
+            &::after {
+                content: '';
+                display: block;
+                height: 4px;
+                width: 50px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-image: url('/public/divider.png');
+                margin: 30px auto 0;
+            }
+        }
+
+        .blog-btn {
+            margin-top: 50px;
+        }
+    }
+
+    .blog-card:last-child {
+        margin-bottom: 0;
+    }
+
+    .blog-card {
+        position: relative;
+        margin-bottom: 120px;
+
+        .blog-card_img {
+            border-radius: 10px;
+        }
+
+        .blog-card_info {
+            position: absolute;
+            background-color: $bg-white;
+            width: 80%;
+            left: 10%;
+            bottom: -50px;
+            height: 100px;
+            border-radius: 5px;
+            text-align: left;
+            padding: 30px 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.20);
+
+
+            .blog-card-date {
+                color: $bg-lgt-grey;
+                font-size: 12px;
+                padding-left: 15px;
+            }
+
+            .blog-card-title {
+                font-weight: 500;
+                text-transform: capitalize;
+
+                .dot {
+                    color: $bg-green;
+                    font-size: 35px;
+                    vertical-align: -5px;
+                    margin-right: 5px;
+                    line-height: 10px;
+                }
+            }
+
+        }
+    }
+
+    .col-2 {
+        flex-basis: calc((100% / 12) * 4);
+    }
+
+    .client-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 70px;
+
+        .client-logo-img {
+            width: 40%;
+        }
+    }
+}
+
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    .section-one .col-6 {
+        flex-basis: calc((100% / 12) * 6);
+    }
+
+    .section-two {
+
+        .col-6 {
+            flex-basis: calc((100% / 12) * 6);
+        }
+
+        .imgs-about {
+
+            background-image: linear-gradient(90deg, $bg-orange 0%, $bg-lgt-orange 100%),
+                url('/busy-architect-PYVKWM4-1024x872.jpg');
+            height: 550px;
+            background-size: cover;
+            border-radius: 0 30px 30px 0;
+
+            .about-img {
+                border-radius: 20px;
+                margin: 50px 0 0 50px;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.20);
+            }
+        }
+
+
+        .about-text {
+            padding: 50px 20px 0 140px;
+        }
+    }
+
+    .section-three {
+        overflow: hidden;
+
+        .col-6 {
+            flex-basis: calc((100% / 12) * 6);
+        }
+
+        .project-img-card-body {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 100px 0;
+            position: relative;
+
+            .col-3 {
+                flex-basis: calc((100% / 12) * 3);
+            }
+        }
+    }
+
+
+    .section-four {
+        text-align: center;
+        background-color: $bg-light;
+
+        .col-4 {
+            flex-basis: calc((100% / 12) * 4);
+        }
+
+        .blog-card {
+            position: relative;
+            margin-bottom: 0;
+        }
+
+        .col-2 {
+            flex-basis: calc((100% / 12) * 2);
+        }
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    .section-one .col-4 {
+        flex-basis: calc((100% / 12) * 4);
+    }
+
+    .section-one .col-8 {
+        flex-basis: calc((100% / 12) * 8);
+    }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}

@@ -1,0 +1,242 @@
+@use './parstials/variables' as*;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#goHome {
+    color: $bg-green;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(90deg, $bg-lgt-black 0%, $bg-black 100%);
+    box-shadow: 3px 7px 20px rgba(0, 0, 0, 0.50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    border-radius: 50px;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    margin-bottom: -12rem;
+    z-index: 8888;
+    transition: margin-bottom 0.2s;
+
+    &.active {
+        margin-bottom: 0;
+    }
+}
+
+.hide {
+    display: none;
+}
+
+html {
+    font-family: 'Baloo Thambi 2';
+}
+
+.container {
+    max-width: 1450px;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+
+
+.row>[class^='col--'] {
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-2 {
+    flex-basis: calc((100% / 12) * 2);
+}
+
+.col-3 {
+    flex-basis: calc((100% / 12) * 3);
+}
+
+.col-4 {
+    flex-basis: calc((100% / 12) * 4);
+}
+
+.col-5 {
+    flex-basis: calc((100% / 12) * 5);
+}
+
+.col-6 {
+    flex-basis: calc((100% / 12) * 6);
+}
+
+.col-8 {
+    flex-basis: calc((100% / 12) * 8);
+}
+
+.col-12 {
+    flex-basis: calc((100% / 12) * 12);
+}
+
+.button {
+    border: none;
+    padding: 18px 40px;
+    background: $bg-gradient;
+    display: block;
+    border-radius: 50px;
+    color: $bg-white;
+    text-transform: uppercase;
+    font-size: 11px;
+    cursor: pointer;
+    box-shadow: 3px 7px 20px rgba(255, 208, 20, 0.7);
+
+
+    &:hover {
+        background: linear-gradient(90deg, $bg-lgt-black 0%, $bg-black 100%);
+        box-shadow: 3px 7px 20px rgba(0, 0, 0, 0.50);
+    }
+}
+
+.logo-items {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+
+// utility class
+
+.space-top {
+    margin-top: 50px;
+}
+
+.space-bottom {
+    padding-bottom: 40px;
+}
+
+
+.orange-text {
+    color: $bg-orange;
+}
+
+.bg-card {
+    background: linear-gradient(90deg, $bg-lgt-black 0%, $bg-black 100%);
+    box-shadow: 3px 7px 20px rgba(0, 0, 0, 0.50);
+}
+
+.bg-black {
+    background: linear-gradient(90deg, $bg-lgt-black 0%, $bg-black 100%);
+    box-shadow: 3px 7px 20px rgba(0, 0, 0, 0.50);
+
+    &:hover.button {
+        background: $bg-gradient;
+        box-shadow: 3px 7px 20px rgba(17, 218, 158, 0.70);
+    }
+}
+
+.bg-gredient {
+    background: linear-gradient(90deg, $bg-lgt-orange 0%, $bg-orange 100%);
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.space-items {
+    justify-content: space-between;
+}
+
+.green-shadow {
+    box-shadow: 3px 7px 20px rgba(255, 208, 20, 0.7);
+}
+
+.page-logo {
+    height: 60px;
+    display: block;
+}
+
+// <!-- inizio sezione 1 -->
+
+
+.debug [class^='col-'] {
+    min-height: 100px;
+    padding: 10px;
+    border: 1px dashed black;
+}
+
+.titles {
+    font-size: 45px;
+    font-weight: 500;
+    display: block;
+    line-height: 65px;
+
+    &::after {
+        content: '';
+        display: block;
+        height: 4px;
+        width: 50px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url('/public/divider.png');
+        margin: 15px 0;
+    }
+}
+
+.caps-letter {
+    text-transform: capitalize;
+}
+
+.text {
+    font-size: 18px;
+    line-height: 23px;
+}
+
+// inizio footer
+
+.campony-name {
+    font-size: 30px;
+    color: $bg-orange;
+}
+
+.menu-title {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 25px;
+
+    &::after {
+        content: '';
+        display: block;
+        height: 4px;
+        width: 50px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url('/public/divider.png');
+        margin: 15px 0;
+    }
+}
