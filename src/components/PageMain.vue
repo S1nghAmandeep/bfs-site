@@ -11,6 +11,7 @@ export default {
     data() {
         return {
             store,
+            videoOn: false,
             options: [
                 {
                     icon: ['fas', 'gauge-high'],
@@ -83,6 +84,11 @@ export default {
                 behavior: 'smooth'
             })
         },
+
+        openVideo() {
+            this.videoOn = !this.videoOn
+            console.log(this.videoOn);
+        }
     },
     mounted() {
         const btn = document.getElementById('goHome')
@@ -183,11 +189,18 @@ export default {
                         </p>
                     </div>
                     <div class="col-12 project-img-card-body">
-                        <div class="col-3 project-img-card" v-for="img in imgs">
+                        <div @click="openVideo()" class="col-3 project-img-card" v-for="img in imgs">
                             <img class="project-img" :src="img" alt="">
                             <div class="project-info">
                                 <h2>Here goes the text</h2>
                                 <p>Here goes the sector</p>
+                            </div>
+                        </div>
+                        <div :class="videoOn ? 'active' : ''" class="video-card">
+                            <iframe class="video" height="450" width="800" src="https://youtube.com/embed/cCNLD5IZY34">
+                            </iframe>
+                            <div @click="openVideo()" class="close-video-icon">
+                                <font-awesome-icon :icon="['far', 'rectangle-xmark']" />
                             </div>
                         </div>
                     </div>
