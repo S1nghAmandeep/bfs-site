@@ -79,6 +79,7 @@
 // inizio sezione 3
 .section-three {
     margin: 180px 0;
+    padding: 0 0 80px 0;
     overflow: hidden;
 
     .col-6 {
@@ -134,6 +135,38 @@
             display: none;
         }
     }
+
+    .video-card {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: black;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+
+        .video {
+            z-index: 999999;
+        }
+    }
+
+    .active {
+        display: flex;
+    }
+
+    .close-video-icon {
+        color: $bg-light;
+        position: fixed;
+        font-size: 35px;
+        right: 35px;
+        top: 35px;
+        z-index: 9999999999;
+        cursor: pointer;
+    }
+
 }
 
 
