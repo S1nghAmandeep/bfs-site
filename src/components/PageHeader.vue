@@ -101,6 +101,7 @@ header {
 
 .menu-bar {
     cursor: pointer;
+    font-size: 20px;
 
     &:hover {
         color: $bg-orange;
@@ -144,7 +145,7 @@ header {
         gap: 30px;
         align-items: center;
         text-transform: uppercase;
-        font-size: 15px;
+        font-size: 18px;
     }
 
     .menu-bar {
