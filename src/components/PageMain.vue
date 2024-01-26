@@ -87,7 +87,11 @@ export default {
 
         openVideo() {
             this.videoOn = !this.videoOn
-            console.log(this.videoOn);
+        },
+
+        closeVideo() {
+            this.videoOn = !this.videoOn
+            document.querySelectorAll('iframe').forEach(v => { v.src = v.src });
         }
     },
     mounted() {
@@ -101,6 +105,8 @@ export default {
             document.getElementById('goHome').classList.remove('active')
 
         });
+
+
     }
 }
 </script>
@@ -197,9 +203,11 @@ export default {
                             </div>
                         </div>
                         <div :class="videoOn ? 'active' : ''" class="video-card">
-                            <iframe class="video" height="450" width="800" src="https://youtube.com/embed/cCNLD5IZY34">
+                            <iframe id="video" class="video" height="450" width="800"
+                                src="https://youtube.com/embed/cCNLD5IZY34?rel=0" frameborder="0"
+                                allow="accelerometer; encrypted-media; picture-in-picture;" allowfullscreen>
                             </iframe>
-                            <div @click="openVideo()" class="close-video-icon">
+                            <div id="stop-video" @click="closeVideo()" class="close-video-icon">
                                 <font-awesome-icon :icon="['far', 'rectangle-xmark']" />
                             </div>
                         </div>
