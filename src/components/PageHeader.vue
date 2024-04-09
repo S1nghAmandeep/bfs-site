@@ -68,19 +68,27 @@ export default {
                         <font-awesome-icon :icon="['fas', 'bars']" />
                     </div>
                 </div>
-                <div @click="getMenuBar()" :class="menuBar ? 'active' : ''" class="bg-menu">
-                    <MenuHeader class="menu-bar-items" :menu="menu" />
-                </div>
             </div>
         </nav>
     </header>
+    <div @click="getMenuBar()" :class="menuBar ? 'active' : ''" class="bg-menu">
+        <MenuHeader class="menu-bar-items" :menu="menu" />
+    </div>
 </template>
 
 <style lang="scss" scoped>
 @use '../styles/parstials/variables' as*;
 
 header {
-    background-color: $bg-white;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.18);
+    backdrop-filter: blur(7px);
+    color: $bg-white;
+    height: 100px;
+    z-index: 10;
+    font-size: 16px;
 }
 
 .nav-items {
@@ -138,7 +146,7 @@ header {
 @media (min-width: 576px) {}
 
 // Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
+@media (min-width: 970px) {
 
     .nav-items {
         display: flex;

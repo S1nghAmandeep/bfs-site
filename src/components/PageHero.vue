@@ -7,13 +7,6 @@ export default {
         return {
 
         };
-    },
-    methods: {
-
-
-    },
-    mounted() {
-
     }
 }
 </script>
@@ -26,7 +19,8 @@ export default {
                     <h1 class="hero_title ">Siamo Esperti <br> Nella <span class="orange-text">Lucidatura</span></h1>
                     <p class="hero_text">Far far away, behind the word mountains, far form th ecountries Vokalia and
                         Consonantia, there live
-                        the blind texts. Separated the live in Bookmarksgrove right at the cost of the Semantics, a large
+                        the blind texts. Separated the live in Bookmarksgrove right at the cost of the Semantics, a
+                        large
                         language ocean. Separated they live in Bookmarksgrove.
                     </p>
                 </div>

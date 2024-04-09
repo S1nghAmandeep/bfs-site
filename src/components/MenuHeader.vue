@@ -32,7 +32,30 @@ export default {
 <style lang="scss" scoped>
 @use '../styles/parstials/variables' as*;
 
-a:hover {
-    color: $bg-orange;
+a {
+    border: 1px solid $bg-orange;
+    padding: 4px 14px;
+    border-radius: 50px;
+
+    &:hover {
+        color: $bg-white;
+        background-color: $bg-orange;
+        cursor: pointer;
+    }
+}
+
+
+li {
+    margin-bottom: 30px;
+}
+
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 970px) {
+
+    li {
+        margin-bottom: 0;
+    }
+
 }
 </style>
